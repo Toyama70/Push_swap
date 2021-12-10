@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:15:14 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/09 15:03:06 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/10 11:17:54 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -39,10 +39,7 @@ void ft_pushmatrix(int array1[], int array2[], int action, int size)//
 	{
 		write(1, "pb\n", 3);
 		ft_pusher(array1, array2, size);
-		/*int i = -1;
-		while(i++ < 4)
-		printf("push matrix : a[i] = %d\n", array1[i]);
-	*/}
+	}
 
 }
 

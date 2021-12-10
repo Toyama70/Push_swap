@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/09 18:37:35 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/10 11:19:50 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
+
 
 void push_swap(int a[], int b[], int size);
 void ft_swapmatrix(int array1[], int array2[], int action);
@@ -49,9 +50,8 @@ void	ft_5extract(int acopy[], int bcopy[], int size);
 int ft_trisolver(int a[], int b[], int size);
 int ft_foursolvercopy(int array1[], int array2[], int size);
 void	bigstack(int a[], int b[], int size);
-void	bigstack(int a[], int b[], int size);
 int		convert_base2(int num);
 void	ft_binarray(int boxes[], int binary[], int size);
-
+void	radix(int a[], int b[], int size);
 
 #endif
