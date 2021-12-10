@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:49:47 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 11:35:45 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/10 12:48:59 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -156,7 +156,7 @@ int main(int argc, char *argv[])
 		bigstack(a, b, size);
 /*	i = -1;
 	while (i++ < size - 1)
-		printf("final a[i] = %d\n", a[i]);*/
-free(a);
+		printf("final a[i] = %d\n", a[i]);
+*/free(a);
 free(b);
 }

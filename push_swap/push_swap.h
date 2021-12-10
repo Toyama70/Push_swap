@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 11:19:50 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/10 13:31:23 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-
+int *zerolast(int a[], int size);
 void push_swap(int a[], int b[], int size);
 void ft_swapmatrix(int array1[], int array2[], int action);
 void ft_rotmatrix(int array1[], int array2[], int action, int size);

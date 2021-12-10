@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 13:44:54 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/07 12:20:56 by ybestrio         ###   ########.fr       */
+/*   Updated: 2021/12/10 13:45:30 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -85,4 +85,32 @@ int ft_try_swap_rot(int array1[], int array2[], int size)//
 		return 1;
 	}
 	return 0;
+}
+
+int *zerolast(int a[] , int size)
+{
+	//scanner et si pas de 0 dans arrayA, return;
+	int *temp;
+	int i;
+	int counter;
+
+	i = 0;
+	counter = 0;
+	temp = malloc(sizeof(int) * size);
+	while (i < size)
+	{
+		if (a[i] != 0)
+		{
+			temp[counter] = a[i];
+			counter++;
+		}
+		i++;
+	}
+	while(counter < size)
+	{
+		temp[counter] = 0;
+		counter++;
+	}
+	
+	return (temp);
 }

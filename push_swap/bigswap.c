@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:13:36 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 11:43:08 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/10 14:01:26 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -49,6 +49,8 @@ void	radix(int a[], int b[], int size)
 	int	i;
 	int	div;
 
+	int k; //todelete
+
 	div = 10;
 	i = -1;
 	while (div <= (convert_base2(size) * 10))
@@ -61,8 +63,49 @@ void	radix(int a[], int b[], int size)
 			else
 				ft_rotmatrix(a, b, 3, size);
 		}
+		//inserer le tri de a
+		k = 0;
+	/*	while(k < size)
+		{
+			printf("prezerolast a[k] = %d\n", a[k]);
+			k++;
+		}
+		k = 0;
+		while(k < size)
+		{
+			printf("prezerolast b[k] = %d\n", b[k]);
+			k++;
+		}*/
+		a = zerolast(a, size);
+	/*	k = 0;
+		while(k < size)
+		{
+			printf("postzerolast a[k] = %d\n", a[k]);
+			k++;
+		}
+		k = 0;
+		while(k < size)
+		{
+			printf("postzerolast b[k] = %d\n", b[k]);
+			k++;
+		}
+	*/	
+		i = 0;
 		while (b[0] != 0)
 			ft_pushmatrix(a, b, 7, size);
+	/*	k = 0;
+		while(k < size)
+		{
+			printf("find de round a[k] = %d\n", a[k]);
+			k++;
+		}
+		k = 0;
+		while(k < size)
+		{
+			printf("fin de round b[k] = %d\n", b[k]);
+			k++;
+		}
+	*/	
 		div *= 10;
 		if (ft_is_sorted(a, size) == 0)
 			return ;
@@ -86,14 +129,10 @@ void bigstack(int a[], int b[], int size)
 	int i = -1;
 	while(i++ < size - 1)
 		printf("boxes[i] = %d\n", boxes[i]);
-
-	i = -1;
-	while(i++ < size - 1)
-		printf("binary[i] = %d\n", binary[i]);
 */
 	radix(binary, b, size);
 /*
-	i = -1;
+	int i = -1;
 	while(i++ < size - 1)
 		printf("binary[i] = %d\n", binary[i]);
 */
