@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 13:31:23 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/11 12:12:46 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ void	bigstack(int a[], int b[], int size);
 int		convert_base2(int num);
 void	ft_binarray(int boxes[], int binary[], int size);
 void	radix(int a[], int b[], int size);
-
+int		ft_exceptions1(int argc, char **argv);
+int		ft_exceptionhandler(int argc, char **argv);
 #endif

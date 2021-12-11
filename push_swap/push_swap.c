@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:49:47 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 12:48:59 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/11 12:25:49 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -124,6 +124,9 @@ int main(int argc, char *argv[])
 	int *a;
 	int *b;
 	//add exception to wrong input; ft_exceptions argc;
+	ft_exceptionhandler(argc, argv)
+	ft_exceptions1(argc, argv);
+	
 	i = 0;
 
 	/*if (argc == 2)
@@ -133,7 +136,7 @@ int main(int argc, char *argv[])
 		b = malloc(sizeof(int) * size);
 		//add une fonction qui parse;
 	}
-	*/
+	
 	if (argc > 2)
 	{
 		size = argc - 1;
@@ -154,9 +157,7 @@ int main(int argc, char *argv[])
 	
 	if (size > 5)
 		bigstack(a, b, size);
-/*	i = -1;
-	while (i++ < size - 1)
-		printf("final a[i] = %d\n", a[i]);
-*/free(a);
-free(b);
+	*/
+	free(a);
+	free(b);
 }
