@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/11 12:12:46 by ybestrio         ###   ########.fr       */
+/*   Updated: 2021/12/12 12:42:54 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,15 @@ void	ft_binarray(int boxes[], int binary[], int size);
 void	radix(int a[], int b[], int size);
 int		ft_exceptions1(int argc, char **argv);
 int		ft_exceptionhandler(int argc, char **argv);
+char	**ft_split(char const *s, char c);
+static void	ft_free_tab(char **tab);
+static char	*ft_str(char const *s, char c);
+static int	count_words(char const *s, char c);
+size_t	ft_strlcpy( char *dst, const char *src, size_t size);
+void	*ft_calloc(size_t elementCount, size_t elementSize);
+void	ft_bzero(void *s, size_t n);
+size_t	ft_strlen(const char *theString);
+void	ft_parser(int *a[], int *b[], int *size, char **argv);
+//int		ft_exceptions2(int argc, char **argv);
+
 #endif
