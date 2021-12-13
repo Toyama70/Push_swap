@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:13:36 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 22:10:25 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/13 22:46:48 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -81,17 +81,22 @@ void bigstack(int a[], int b[], int size)
 	int *boxes;
 	int *binary;
 
-	if (size > 700)
+/*	if (size > 700)
 	{
 		above700(a, b, size);
 		return;
-	}
-	/*binary = malloc(sizeof(int) * size);
+	}*/
+	binary = malloc(sizeof(int) * size);
 	boxes = malloc(sizeof(int) * size);
 	boxes = ft_putboxes(a, b, size);
+	if (size > 700)
+	{
+		above700(boxes, b, size);
+		return;
+	}
 	ft_binarray(boxes, binary, size);
 
-	radix(binary, b, size);*/
+	radix(binary, b, size);
 }
 
 int	ft_findsmallest(int *a, int size)
@@ -115,6 +120,58 @@ return (smallest);
 void	above700(int *a, int *b, int size)
 {
 	int	i;
+	int k;
+	int count;
+	int smallest;
+	int round;
+
+	round = 0;
+	count = 0;
+	while (round < size)
+	{
+		a = zerolast(a, size);
+		if(a[0] == 0)
+			break;
+		smallest = a[0];
+		i = 0;
+		k = 0;
+		count = 0;
+		while (i < size)
+		{
+			if(a[i] < smallest && a[i] != 0)
+				{
+					k = i;
+					smallest = a[i];
+				}
+			i++;
+		}
+
+		while(k > 0)
+		{
+			ft_rotmatrix(a,b, 3, size);
+			k--;
+		}
+		if (a[0] != 0)
+			ft_pushmatrix(a, b, 8, size);
+		round++;
+	}
+	i = 0;
+	while (i < size)
+	{
+		ft_pushmatrix(a, b, 7, size);
+		i++;
+	}
+
+
+
+
+
+
+
+
+
+
+/*	int	i;
 
 	//a = ft_putboxes2(a, b, size);
 	i = 1;
@@ -132,7 +189,7 @@ void	above700(int *a, int *b, int size)
 	//while (ft_is_sorted(a, size) != 0)
 	//	ft_rotmatrix(a, b, 3, size);
 
-/*	i = 0;
+	i = 0;
 	while (i < size)
 	{
 		printf("a[%d] = %d\n", i, a[i]);
