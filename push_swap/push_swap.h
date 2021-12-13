@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 12:34:36 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/13 19:39:20 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
-
+int		*ft_putboxes2(int array1[], int array2[], int size);
+int		ft_findsmallest(int *a, int size);
+void	above700(int a[], int b[], int size);
 int		ft_doublon(int *a, int size);
 int		ft_doublesigns(int argc, char **a);
 int		ft_exceptions2(int argc, char **argv);

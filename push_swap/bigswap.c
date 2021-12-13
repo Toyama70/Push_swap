@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:13:36 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 16:07:26 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/13 22:10:25 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -81,45 +81,61 @@ void bigstack(int a[], int b[], int size)
 	int *boxes;
 	int *binary;
 
-	//verif rotations, verif reverse rot
 	if (size > 700)
 	{
 		above700(a, b, size);
 		return;
 	}
-	binary = malloc(sizeof(int) * size);
+	/*binary = malloc(sizeof(int) * size);
 	boxes = malloc(sizeof(int) * size);
 	boxes = ft_putboxes(a, b, size);
 	ft_binarray(boxes, binary, size);
 
-//	radix(binary, b, size); // demander a Mushu
-/*	
-	int i = -1;
-	while(i++ < size - 1)
-		printf("boxes[i] = %d\n", boxes[i]);
-*/
-	radix(binary, b, size);
-/*
-	int i = -1;
-	while(i++ < size - 1)
-		printf("binary[i] = %d\n", binary[i]);
-*/
+	radix(binary, b, size);*/
+}
+
+int	ft_findsmallest(int *a, int size)
+{
+	int i;
+	int smallest;
+
+	smallest = a[0];
+	i = 0;
+	while (i < size)
+	{
+		if (a[i] < smallest)
+			smallest = a[i];
+		i++;
+	}
+return (smallest);
+
+
 }
 
 void	above700(int *a, int *b, int size)
 {
 	int	i;
 
+	//a = ft_putboxes2(a, b, size);
 	i = 1;
 	while (size - i > 0)
 	{
-		while (a[0] != size - (size - i) && a[0] != 0)
-			ft_rotmatrix(a,b, 3, size);
+		while (a[0] != size - (size - i))
+			ft_rotmatrix(a,b, 3, size);	
 		ft_pushmatrix(a, b, 8, size);
 		i++;
 	}
-	a = zerolast(a, size);
-	// add sort with 0 to the end, like in radix
+	//a = zerolast(a, size);
+	//b = zerolast(b, size);
 	while (b[0] != 0)
-		pushmatrix(a, b, 7, size);
+		ft_pushmatrix(a, b, 7, size);
+	//while (ft_is_sorted(a, size) != 0)
+	//	ft_rotmatrix(a, b, 3, size);
+
+/*	i = 0;
+	while (i < size)
+	{
+		printf("a[%d] = %d\n", i, a[i]);
+		i++;
+	}*/
 }
