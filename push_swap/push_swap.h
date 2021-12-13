@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/12 12:42:54 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/13 12:34:36 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+int		ft_doublon(int *a, int size);
+int		ft_doublesigns(int argc, char **a);
+int		ft_exceptions2(int argc, char **argv);
+int		ft_double(int argc, char **a);
 int *zerolast(int a[], int size);
 void push_swap(int a[], int b[], int size);
 void ft_swapmatrix(int array1[], int array2[], int action);
@@ -56,14 +60,15 @@ void	radix(int a[], int b[], int size);
 int		ft_exceptions1(int argc, char **argv);
 int		ft_exceptionhandler(int argc, char **argv);
 char	**ft_split(char const *s, char c);
-static void	ft_free_tab(char **tab);
-static char	*ft_str(char const *s, char c);
-static int	count_words(char const *s, char c);
+void	ft_free_tab(char **tab);
+char	*ft_str(char const *s, char c);
+int	count_words(char const *s, char c);
 size_t	ft_strlcpy( char *dst, const char *src, size_t size);
 void	*ft_calloc(size_t elementCount, size_t elementSize);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *theString);
 void	ft_parser(int *a[], int *b[], int *size, char **argv);
-//int		ft_exceptions2(int argc, char **argv);
+int		ft_compare(int a[], int b[], int size);
+
 
 #endif

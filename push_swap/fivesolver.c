@@ -6,7 +6,7 @@
 /*   By: ybestrio <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 10:13:46 by ybestrio          #+#    #+#             */
-/*   Updated: 2021/12/09 14:56:27 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/12 19:50:38 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -24,13 +24,13 @@ int	ft_foursolvercopy(int array1[], int array2[], int size)
 	int bcopy[4];
 	int i = 0;
 
+	(void)(size);
 	while (i < 4)
 	{
 		acopy[i] = array1[i];
 		bcopy[i] = array2[i];
 		i++;
 	}
-
 	ft_4extract(acopy, bcopy, 4);
 	i = 0;
 	while(i < 4)
@@ -40,8 +40,6 @@ int	ft_foursolvercopy(int array1[], int array2[], int size)
 		i++;
 
 	}
-
-
 	return 1;
 }
 

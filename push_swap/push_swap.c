@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:49:47 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/12 12:48:17 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/13 15:07:48 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -124,24 +124,12 @@ int main(int argc, char *argv[])
 	int *a;
 	int *b;
 
-	//add exception to wrong input; ft_exceptions argc;
-	ft_exceptionhandler(argc, argv);
-	
+	if (ft_exceptionhandler(argc, argv) == 1)
+		return (0);
 	i = 0;
-
 	if (argc == 2)
-	{
 		ft_parser(&a, &b,  &size, argv);
-	}
-
-/*
-		//calculer un size; MANDATORY
-		a = malloc(sizeof(int) * size);
-		b = malloc(sizeof(int) * size);
-		//add une fonction qui parse;
-	}*/
-	
-	if (argc > 2)
+	if (argc > 2) //peut etre tranforme en fonction;
 	{
 		size = argc - 1;
 		a = malloc(sizeof(int) * size);
@@ -152,17 +140,16 @@ int main(int argc, char *argv[])
 			i++;
 		}
 	}
-	//else return 0; // a supprimer, bricolage pour Wall Wextra Werror
+	if (ft_doublon(a, size) == 1)//erro
+		return 0;	
 	ft_fillzero(b, size);
-
 	if (ft_is_sorted(a, size) == 0)
 		return 0;
 	if (size <= 5)
 		push_swap(a, b, size);
-	
 	if (size > 5)
 		bigstack(a, b, size);
-	
 	free(a);
 	free(b);
+//	system("leaks a.out");
 }

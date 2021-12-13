@@ -6,12 +6,12 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 10:51:15 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/12 10:51:27 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/12 19:41:12 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-static int	count_words(char const *s, char c)
+int	count_words(char const *s, char c)
 {
 	int		count;
 	int		i;
@@ -30,7 +30,7 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-static char	*ft_str(char const *s, char c)
+char	*ft_str(char const *s, char c)
 {
 	int		i;
 	char	*ptr;
@@ -48,7 +48,7 @@ static char	*ft_str(char const *s, char c)
 	return (ptr);
 }
 
-static void	ft_free_tab(char **tab)
+void	ft_free_tab(char **tab)
 {
 	char	**pos;
 
