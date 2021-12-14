@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 19:39:20 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/14 11:38:14 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,10 @@ void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *theString);
 void	ft_parser(int *a[], int *b[], int *size, char **argv);
 int		ft_compare(int a[], int b[], int size);
+int		ft_atoi(const char *str);
+int		check_empty(char *args);
+int verif_long(const char *str, int i, int signe);
+int		check_int(char *str);
 
 
 #endif

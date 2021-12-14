@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:49:47 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 15:07:48 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/14 11:17:03 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
 		b = malloc(sizeof(int) * size);
 		while (i < size)
 		{
-			a[i] = atoi(argv[i + 1]); //switcher avec atoi perso
+			a[i] = ft_atoi(argv[i + 1]); //switcher avec atoi perso
 			i++;
 		}
 	}

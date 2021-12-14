@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 10:27:14 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 13:26:17 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/14 11:16:46 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -26,7 +26,7 @@ void ft_parser(int *a[], int *b[],int *size, char **argv)
 	i = 0;
 	while (toparse[i] != 0)
 	{
-		(*a)[i] = atoi(toparse[i]);
+		(*a)[i] = ft_atoi(toparse[i]);
 		i++;
 	}
 }
