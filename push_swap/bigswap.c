@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:13:36 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/13 22:46:48 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/16 12:20:24 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -68,10 +68,15 @@ void	radix(int a[], int b[], int size)
 		a = zerolast(a, size);
 		i = 0;
 		while (b[0] != 0)
+		{
 			ft_pushmatrix(a, b, 7, size);
+		}
 		div *= 10;
 		if (ft_is_sorted(a, size) == 0)
+		{
+			free(a);
 			return ;
+		}
 	}
 }
 
@@ -87,16 +92,20 @@ void bigstack(int a[], int b[], int size)
 		return;
 	}*/
 	binary = malloc(sizeof(int) * size);
-	boxes = malloc(sizeof(int) * size);
+	//boxes = malloc(sizeof(int) * size);
 	boxes = ft_putboxes(a, b, size);
 	if (size > 700)
 	{
 		above700(boxes, b, size);
+		free(binary);
 		return;
 	}
 	ft_binarray(boxes, binary, size);
 
 	radix(binary, b, size);
+//	free(binary);
+	free(boxes);
+
 }
 
 int	ft_findsmallest(int *a, int size)
@@ -139,10 +148,10 @@ void	above700(int *a, int *b, int size)
 		while (i < size)
 		{
 			if(a[i] < smallest && a[i] != 0)
-				{
+			{
 					k = i;
 					smallest = a[i];
-				}
+			}
 			i++;
 		}
 
@@ -161,38 +170,5 @@ void	above700(int *a, int *b, int size)
 		ft_pushmatrix(a, b, 7, size);
 		i++;
 	}
-
-
-
-
-
-
-
-
-
-
-/*	int	i;
-
-	//a = ft_putboxes2(a, b, size);
-	i = 1;
-	while (size - i > 0)
-	{
-		while (a[0] != size - (size - i))
-			ft_rotmatrix(a,b, 3, size);	
-		ft_pushmatrix(a, b, 8, size);
-		i++;
-	}
-	//a = zerolast(a, size);
-	//b = zerolast(b, size);
-	while (b[0] != 0)
-		ft_pushmatrix(a, b, 7, size);
-	//while (ft_is_sorted(a, size) != 0)
-	//	ft_rotmatrix(a, b, 3, size);
-
-	i = 0;
-	while (i < size)
-	{
-		printf("a[%d] = %d\n", i, a[i]);
-		i++;
-	}*/
+	free(a);
 }

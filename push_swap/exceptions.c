@@ -6,7 +6,7 @@
 /*   By: ybestrio <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 10:54:38 by ybestrio          #+#    #+#             */
-/*   Updated: 2021/12/14 11:37:19 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/16 12:57:23 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -59,6 +59,13 @@ int ft_exceptionhandler(int argc, char **argv)
 		}	
 
 	}
+	if (ft_handler2(argc, argv) == 1)
+		return (1);
+	return (0);
+}
+
+int		ft_handler2(int argc, char **argv)
+{
 	if (argc <= 2)
 	{
 		if (ft_exceptions1(argc, argv) == 1)
@@ -164,7 +171,7 @@ int		ft_exceptions2(int argc, char **a)
 	return (0);
 }
 
-int		ft_exceptions1(int argc, char **a)
+int		ft_exceptions1(int argc, char **a) //need to be divided cf Mushu
 {
 	int i;
 	int k;
@@ -175,7 +182,6 @@ int		ft_exceptions1(int argc, char **a)
 		return (1);
 	}
 	i = 1;
-
 	if (argc == 2)	
 	{	
 		while (i < argc)

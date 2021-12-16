@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 13:44:54 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/10 13:45:30 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/15 11:49:18 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -111,6 +111,6 @@ int *zerolast(int a[] , int size)
 		temp[counter] = 0;
 		counter++;
 	}
-	
+	free(a);
 	return (temp);
 }

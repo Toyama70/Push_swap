@@ -6,7 +6,7 @@
 /*   By: ybestrio <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 12:57:29 by ybestrio          #+#    #+#             */
-/*   Updated: 2021/12/13 19:43:09 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/16 12:28:49 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -22,7 +22,6 @@ int *ft_putboxes2(int array1[], int array2[], int size)
 
 	temp = malloc(sizeof(int) * size);
 	i = 0;
-
 	while (i < size)
 	{
 		k = 0;
@@ -38,9 +37,8 @@ int *ft_putboxes2(int array1[], int array2[], int size)
 		}
 		i++;
 	}
-(void)(array2); // bricolage
+(void)(array2);
 return (temp);
-
 }
 
 
@@ -54,7 +52,6 @@ int *ft_putboxes(int array1[], int array2[], int size)
 
 	temp = malloc(sizeof(int) * size);
 	i = 0;
-
 	while (i < size)
 	{
 		k = 0;
@@ -70,7 +67,6 @@ int *ft_putboxes(int array1[], int array2[], int size)
 		}
 		i++;
 	}
-(void)(array2); // bricolage
+(void)(array2);
 return (temp);
-
 }

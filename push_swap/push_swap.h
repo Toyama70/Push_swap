@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:28:04 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/14 11:38:14 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/16 12:32:29 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int		*ft_putboxes2(int array1[], int array2[], int size);
 int		ft_findsmallest(int *a, int size);
 void	above700(int a[], int b[], int size);
-int		ft_doublon(int *a, int size);
+int		ft_doublon(int *a, int *b, int size);
 int		ft_doublesigns(int argc, char **a);
 int		ft_exceptions2(int argc, char **argv);
 int		ft_double(int argc, char **a);
@@ -75,6 +75,8 @@ int		ft_atoi(const char *str);
 int		check_empty(char *args);
 int verif_long(const char *str, int i, int signe);
 int		check_int(char *str);
-
+void	ft_size(int a[], int b[], int size);
+void	ft_check(int a[], int b[], int size);
+int		ft_handler2(int argc, char **argv);
 
 #endif

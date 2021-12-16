@@ -6,14 +6,14 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:49:47 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/14 11:17:03 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/16 12:27:24 by yasinbest        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void ft_putstrnl(char *str)
+void	ft_putstrnl(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while(str[i])
@@ -25,14 +25,14 @@ void ft_putstrnl(char *str)
 	return;
 }
 
-void ft_rotate(int array[], int size)
+void	ft_rotate(int array[], int size)
 {
-	int temp;
-	int exchange[size]; // potentiellement non valable pour la norme, a malloc puis free;
-	int i;
+	int	temp;
+	int	*exchange; // potentiellement non valable pour la norme, a malloc puis free;
+	int	i;
 
 	i = 1;
-
+	exchange = malloc(sizeof(int) * size);
 	temp = array[0];
 	while (i < size)
 	{
@@ -46,11 +46,12 @@ void ft_rotate(int array[], int size)
 		i++;
 	}
 	array[i - 1] = temp;
+	free(exchange);
 }
 
-void ft_swap(int array[])
+void	ft_swap(int array[])
 {
-	int temp;
+	int	temp;
 
 	temp = array[1];
 	array[1] = array[0];
@@ -58,7 +59,7 @@ void ft_swap(int array[])
 }
 
 
-void ft_rotmatrix(int array1[], int array2[], int action, int size)
+void	ft_rotmatrix(int array1[], int array2[], int action, int size)
 {
 	if (action == 3 || action == 6)
 	{
@@ -81,7 +82,7 @@ void ft_rotmatrix(int array1[], int array2[], int action, int size)
 }
 
 
-void ft_swapmatrix(int array1[], int array2[], int action)
+void	ft_swapmatrix(int array1[], int array2[], int action)
 {
 	if (action == 1 || action == 5)
 	{
@@ -101,7 +102,7 @@ void ft_swapmatrix(int array1[], int array2[], int action)
 
 
 
-void push_swap(int a[], int b[], int size)
+void	push_swap(int a[], int b[], int size)
 {
 	if (ft_calculation(a, b, size) == 1)
 		return;
@@ -113,43 +114,31 @@ void push_swap(int a[], int b[], int size)
 		ft_foursolver(a, b, size);
 	if (size == 5)
 		ft_fivesolver(a, b, size);
-
-
 }
 
-int main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
-	int size;
-	int i;
-	int *a;
-	int *b;
+	int	size;
+	int	i;
+	int	*a;
+	int	*b;
 
 	if (ft_exceptionhandler(argc, argv) == 1)
 		return (0);
-	i = 0;
+	i = -1;
 	if (argc == 2)
 		ft_parser(&a, &b,  &size, argv);
-	if (argc > 2) //peut etre tranforme en fonction;
+	if (argc > 2)
 	{
 		size = argc - 1;
 		a = malloc(sizeof(int) * size);
 		b = malloc(sizeof(int) * size);
-		while (i < size)
-		{
-			a[i] = ft_atoi(argv[i + 1]); //switcher avec atoi perso
-			i++;
-		}
+		while (++i < size)
+			a[i] = ft_atoi(argv[i + 1]);
 	}
-	if (ft_doublon(a, size) == 1)//erro
-		return 0;	
 	ft_fillzero(b, size);
-	if (ft_is_sorted(a, size) == 0)
-		return 0;
-	if (size <= 5)
-		push_swap(a, b, size);
-	if (size > 5)
-		bigstack(a, b, size);
+	ft_check(a, b, size);
+	ft_size(a, b, size);
 	free(a);
 	free(b);
-//	system("leaks a.out");
 }

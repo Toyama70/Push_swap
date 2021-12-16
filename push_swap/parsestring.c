@@ -6,7 +6,7 @@
 /*   By: yasinbestrioui <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 10:27:14 by yasinbest         #+#    #+#             */
-/*   Updated: 2021/12/14 11:16:46 by yasinbest        ###   ########.fr       */
+/*   Updated: 2021/12/15 10:45:20 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -29,14 +29,19 @@ void ft_parser(int *a[], int *b[],int *size, char **argv)
 		(*a)[i] = ft_atoi(toparse[i]);
 		i++;
 	}
+	i = 0;
+	while (toparse[i])
+	{
+		free(toparse[i]);
+		i++;
+	}
+	free(toparse);
 }
 
-int		ft_doublon(int *a, int size)
+int		ft_doublon(int *a, int *b, int size)
 {
 	int i;
-	int *b;
 
-	b = malloc(sizeof(int) * size);
 	i = -1;
 	while (++i < size)
 		b[i] = a[i];
@@ -45,7 +50,7 @@ int		ft_doublon(int *a, int size)
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	free(b);
+	ft_fillzero(b, size);
 	return (0);
 }
 
