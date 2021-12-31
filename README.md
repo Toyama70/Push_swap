@@ -12,7 +12,7 @@ The objective is to develop your algorithm skills. I proceeded with a first chec
 
 For a stack bigger than 5 integers, I adopted a Radix sorting. To manage that, I put all integers in metaphorical boxes : I reattribute the integers with numbers from 1 to infinite that I convert to binary numbers. Then I just need to Radix sort the binary stack. The reason I relied on this method is because initially Radix doesn't handle negative numbers, but my program had to handle it so I transfered the integers to boxes as I call them, allowing me to get rid of the negative numbers the time for me to find a sorting way.
 
-To test the program, enter the integers as arguments in the terminal. The output is the maneuver required for sorting, here is an explanation of each maneuver :
+To test the program, enter the integers as arguments in the terminal. The output represents the maneuvers required for sorting, here is an explanation of each maneuver :
 
 sa : swap a - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements).
 
