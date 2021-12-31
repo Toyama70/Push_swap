@@ -37,3 +37,9 @@ rra : reverse rotate a - shift down all elements of stack a by 1. The last eleme
 rrb : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
 
 rrr : rra and rrb at the same time.
+
+# Room for improvement
+
+We had to be able to sort efficiently up to 500 integers which my program does. But above 700 a slower algorithm handles the sorting.
+
+Due to the school rules, I had to deport some pieces of functions in other files, those are "Savespace, sizelimit and sizelimit2". I find this counterintuitive and there is room for improvement.
